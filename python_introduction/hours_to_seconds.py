@@ -1,8 +1,7 @@
-# python_introduction/hours_to_seconds.py
-
 hours = 2  # Number of hours to convert
-seconds_per_hour = 3600  # 60 minutes * 60 seconds
 
-seconds = hours * seconds_per_hour
+seconds = hours * 3600
 
-print(f"{hours} hour(s) is {seconds} seconds.")
+hour_str = "hour" if abs(hours) == 1 else "hours"
+print(f"{hours} {hour_str} is {seconds} seconds.")
+# 2 hours is 7200 seconds.
