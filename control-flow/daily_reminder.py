@@ -23,12 +23,15 @@ def daily_reminder():
             return
 
     if time_bound == "yes":
-        reminder_message = f"Reminder: '{task}' is a {priority_message} that requires immediate attention today!"
+        reminder = f"Reminder: '{task}' is a {priority_message} that requires immediate attention today!"
+    elif time_bound == "no":
+        reminder = f"Note: '{task}' is a {priority_message}. Consider completing it when you have free time."
     else:
-        reminder_message = f"Note: '{task}' is a {priority_message}. Consider completing it when you have free time."
+        print("Invalid input for time-bound task.")
+        return
 
     # Print reminder
-    print(reminder_message)
+    print(reminder)
 
 if __name__ == "__main__":
     daily_reminder()
