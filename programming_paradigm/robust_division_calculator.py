@@ -7,8 +7,10 @@ def safe_divide(numerator, denominator):
 
     try:
         result = numerator / denominator
-        return f"The result of the division is {result:.2g}"
+        if result % 1 == 0:
+            return f"The result of the division is {int(result)}.0"
+        else:
+            return f"The result of the division is {result:.1f}"
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
-
 
